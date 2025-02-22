@@ -37,10 +37,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Fill in start
     rcptToCommand = 'RCPT TO: <person@mail.com>\r\n'
     clientSocket.send(rcptToCommand.encode())
-    recv3 = clientSocket.recv(1024).decode()
-    #print(recv3)
-    # if recv3[:3] != '250':
-    #   print('250 reply not received from server.')
+    
     # Fill in end
 
     # Send DATA command and handle server response.
